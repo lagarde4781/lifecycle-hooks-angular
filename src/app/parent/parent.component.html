@@ -1,0 +1,9 @@
+<h1>Parent component</h1>
+
+<button (click)="toggleChild()">Toggle Child</button>
+
+<input type="text" [(ngModel)]="channelName">
+
+<app-child *ngIf="isChild" [channelName]="channelName">
+    <h2 #projectedContent>Lifecycle Hooks!!</h2>
+</app-child>
